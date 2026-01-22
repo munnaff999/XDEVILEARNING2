@@ -1,35 +1,132 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>XDevil Earning</title>
+  <meta charset="UTF-8">
+  <title>XDevil Earning – Install & Earn</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✅ MYLEAD VERIFICATION (DON'T REMOVE) -->
+  <meta name="mylead-verification" content="076c59a76e141e4caad47f89c494b3ce">
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+    .topbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #111;
+      color: #fff;
+      padding: 12px;
+    }
+    .balance {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .withdraw {
+      background: #00c853;
+      color: #fff;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+    .profile {
+      font-size: 14px;
+    }
+    h2 {
+      padding: 12px;
+      margin: 0;
+    }
+    .offer {
+      background: #fff;
+      margin: 12px;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .offer-title {
+      font-size: 16px;
+      font-weight: bold;
+    }
+    .offer-earn {
+      color: green;
+      margin: 6px 0;
+    }
+    .install-btn {
+      display: block;
+      text-align: center;
+      background: #2979ff;
+      color: #fff;
+      padding: 10px;
+      border-radius: 6px;
+      text-decoration: none;
+      margin-top: 10px;
+    }
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #666;
+      padding: 15px;
+    }
+  </style>
 </head>
 
-<body style="font-family:sans-serif;">
+<body>
 
-<!-- TOP BAR -->
-<div style="display:flex;justify-content:space-between;padding:10px;background:#222;color:#fff;">
-  <div>💰 ₹<span id="balance">0</span></div>
-  <button onclick="withdraw()">Withdraw</button>
-  <div>👤 Profile</div>
-</div>
+  <!-- 🔝 TOP BAR -->
+  <div class="topbar">
+    <div class="balance">💰 ₹<span id="balance">0</span></div>
+    <button class="withdraw" onclick="withdraw()">Withdraw</button>
+    <div class="profile">👤 Profile</div>
+  </div>
 
-<!-- INSTALL OFFERS -->
-<h3 style="padding:10px;">Tap to Install & Earn</h3>
+  <!-- 📲 OFFERS -->
+  <h2>Tap to Install & Earn</h2>
 
-<div onclick="installOffer('offer1')" style="padding:15px;margin:10px;background:#f2f2f2;">
-  Install App 1 – Earn ₹10
-</div>
+  <!-- OFFER 1 -->
+  <div class="offer">
+    <div class="offer-title">Install App & Earn</div>
+    <div class="offer-earn">Earn ₹30</div>
+    <a class="install-btn"
+       href="#"
+       onclick="installOffer('https://track.mylead.global/click/XXXXXX')">
+       Install Now
+    </a>
+  </div>
 
-<div onclick="installOffer('offer2')" style="padding:15px;margin:10px;background:#f2f2f2;">
-  Install App 2 – Earn ₹15
-</div>
+  <!-- OFFER 2 -->
+  <div class="offer">
+    <div class="offer-title">Install & Sign Up</div>
+    <div class="offer-earn">Earn ₹50</div>
+    <a class="install-btn"
+       href="#"
+       onclick="installOffer('https://track.mylead.global/click/YYYYYY')">
+       Install Now
+    </a>
+  </div>
 
-<!-- FIREBASE -->
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
-<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+  <div class="footer">
+    © 2026 XDevil Earning • All rights reserved
+  </div>
 
-<script src="script.js"></script>
+  <!-- 🔧 SCRIPT -->
+  <script>
+    // DEMO BALANCE (REAL EARNING CPA SE AAYEGA)
+    let balance = 0;
+
+    function installOffer(link) {
+      alert("Redirecting to install offer...");
+      window.location.href = link;
+    }
+
+    function withdraw() {
+      alert("Minimum withdraw ₹200\nWithdraw request sent (manual approval)");
+    }
+  </script>
+
 </body>
 </html>
