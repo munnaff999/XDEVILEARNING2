@@ -1,101 +1,134 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>XDevil Earning</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
 
-<!-- MYLEAD VERIFIED -->
-<meta name="mylead-verification" content="076c59a76e141e4caad47f89c494b3ce">
+  <!-- MyLead Verification -->
+  <meta name="mylead-verification" content="076c59a76e141e4caad47f89c494b3ce">
 
-<style>
-body{margin:0;font-family:Arial;background:#f2f2f2}
-.topbar{
-  background:#111;color:#fff;
-  display:flex;justify-content:space-between;
-  align-items:center;padding:12px
-}
-.withdraw{background:#00c853;border:none;color:#fff;padding:7px 10px;border-radius:6px}
-.offer{
-  background:#fff;margin:12px;
-  padding:15px;border-radius:10px
-}
-.install{
-  background:#2979ff;color:#fff;
-  text-decoration:none;
-  padding:10px;border-radius:6px;
-  display:block;text-align:center
-}
-small{color:#555}
-</style>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>X Devil Earning</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+    }
+
+    header {
+      background: #111;
+      color: #fff;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .profile {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: #fff;
+      color: #111;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    .balance-box {
+      background: #fff;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .balance {
+      font-size: 20px;
+      font-weight: bold;
+      color: green;
+    }
+
+    .withdraw {
+      background: #ff9800;
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 5px;
+      font-size: 14px;
+    }
+
+    .app-box {
+      background: #fff;
+      margin: 15px;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .app-box h3 {
+      margin: 0 0 10px;
+    }
+
+    .install-btn {
+      display: block;
+      margin-top: 10px;
+      background: #4CAF50;
+      color: #fff;
+      padding: 12px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      padding: 15px;
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- TOP -->
-<div class="topbar">
-  <div>💰 ₹<span id="balance">0</span></div>
-  <button class="withdraw" onclick="withdraw()">Withdraw</button>
-  <div>👤 Profile</div>
-</div>
+  <!-- HEADER -->
+  <header>
+    <div>X Devil Earning</div>
+    <div class="profile">U</div>
+  </header>
 
-<h3 style="padding:12px">Install & Earn (Daily limit: 30)</h3>
+  <!-- BALANCE -->
+  <div class="balance-box">
+    <div>
+      Total Earning<br>
+      <span class="balance">₹ 0</span>
+    </div>
+    <div class="withdraw">Withdraw</div>
+  </div>
 
-<!-- OFFER 1 -->
-<div class="offer">
-  <b>Install + Signup</b>
-  <p>Earn ₹10</p>
-  <a class="install" onclick="openOffer(10,'LINK1')" href="#">Install</a>
-</div>
+  <!-- OFFER 1 -->
+  <div class="app-box">
+    <h3>Install App & Earn ₹30</h3>
+    <p>Install + Signup</p>
+    <a href="PASTE_MY_LEAD_TRACKING_LINK_HERE"
+       class="install-btn">Tap to Install</a>
+  </div>
 
-<!-- OFFER 2 -->
-<div class="offer">
-  <b>Install + Signup + KYC</b>
-  <p>Earn ₹20</p>
-  <a class="install" onclick="openOffer(20,'LINK2')" href="#">Install</a>
-</div>
+  <!-- OFFER 2 -->
+  <div class="app-box">
+    <h3>Install App & Earn ₹50</h3>
+    <p>Install + Signup + KYC</p>
+    <a href="PASTE_MY_LEAD_TRACKING_LINK_HERE"
+       class="install-btn">Tap to Install</a>
+  </div>
 
-<small style="padding:12px;display:block">
-⚠️ Fake activity will not be paid. Daily max 30 apps allowed.
-</small>
-
-<script>
-let balance = localStorage.getItem("balance") || 0;
-let installs = localStorage.getItem("installs") || 0;
-let dateSaved = localStorage.getItem("date");
-
-let today = new Date().toDateString();
-
-// reset daily
-if(dateSaved !== today){
-  installs = 0;
-  localStorage.setItem("installs",0);
-  localStorage.setItem("date",today);
-}
-
-document.getElementById("balance").innerText = balance;
-
-function openOffer(amount, link){
-  if(installs >= 30){
-    alert("Daily limit reached (30 apps)");
-    return;
-  }
-
-  installs++;
-  localStorage.setItem("installs", installs);
-
-  // only display balance (real earning mylead se)
-  balance = parseInt(balance) + amount;
-  localStorage.setItem("balance", balance);
-  document.getElementById("balance").innerText = balance;
-
-  window.location.href = link; // MYLEAD OFFER LINK
-}
-
-function withdraw(){
-  alert("Minimum withdraw ₹300\nRequest will be reviewed manually.");
-}
-</script>
+  <footer>
+    © 2026 X Devil Earning | All Rights Reserved
+  </footer>
 
 </body>
 </html>
