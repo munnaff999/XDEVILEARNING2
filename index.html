@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>XDevil Earning</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="font-family:sans-serif;">
+
+<!-- TOP BAR -->
+<div style="display:flex;justify-content:space-between;padding:10px;background:#222;color:#fff;">
+  <div>💰 ₹<span id="balance">0</span></div>
+  <button onclick="withdraw()">Withdraw</button>
+  <div>👤 Profile</div>
+</div>
+
+<!-- INSTALL OFFERS -->
+<h3 style="padding:10px;">Tap to Install & Earn</h3>
+
+<div onclick="installOffer('offer1')" style="padding:15px;margin:10px;background:#f2f2f2;">
+  Install App 1 – Earn ₹10
+</div>
+
+<div onclick="installOffer('offer2')" style="padding:15px;margin:10px;background:#f2f2f2;">
+  Install App 2 – Earn ₹15
+</div>
+
+<!-- FIREBASE -->
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
+
+<script src="script.js"></script>
+</body>
+</html>
